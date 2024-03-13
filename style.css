@@ -1,0 +1,252 @@
+:root{
+    --blue: #0080ff;
+}
+*{
+    font-family: poppins ,sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-decoration: none;
+    /* text-transform: none; */
+    transition: all .5s linear;
+}::selection{
+    background-color: pink;
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* font-size: 62%; */
+
+}
+body {
+    position: relative;
+}
+
+/* start header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* right: 0; */
+    background: #07333f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem 9%;
+    
+}
+.logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    /* border: 1px; */
+    color: white;
+    /* text-transform: none; */
+}
+.logo span{
+    color: var(--blue);
+}
+
+/* start navbar */
+.navbar a{
+    color: white;
+    margin: .8rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.navbar a:hover{
+    color: var(--blue);
+}
+.icon{
+    color: white;
+    cursor: pointer;
+    /* margin-right: 2rem; */
+
+}
+.icon .fa-search{
+    margin-right: .6rem;
+}
+.icon .fas:hover{
+    color: var(--blue);
+}
+.search-form{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    right: 0;
+    background: #333;
+    display: flex;
+    align-items: center;
+    z-index: 10000;
+    padding: 1.5rem 2rem;
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.search-form.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+.search-form input[type="search"]{
+    width: 100%;
+    padding: 1rem;
+    color: var(--blue);
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    color: #333;
+}
+.search-form label{
+    color: white;
+    cursor: pointer;
+    /* font-size: 2.5rem; */
+    margin-left: 1.5rem;
+}
+.search-form label:hover{
+    color: var(--blue);
+}
+
+/* start login form */
+.login-form{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+.login-form.active{
+    top: 0;
+}
+.login-form .fa-times{
+    position: absolute;
+    top: 2rem ;
+    right: 3rem;
+    color: white;
+    cursor: pointer;    
+    
+}
+.login-form form{
+    margin: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    width: 50rem;
+    background: white;
+}
+.login-form form h4{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.login-form form .box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #0a0101;
+    margin: 1rem 0;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: rgb(196, 196, 196);
+    margin-top: 2.5rem;
+}
+.login-form form input[type="submit"]:hover{
+    color: white;
+    background: var(--blue);
+    border: 1rem solid darkblue;
+    margin: 1rem 0;
+}
+.login-form form #remember{
+    margin-right: .8rem;
+}
+.login-form form input[type="checkbox"]+label{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.login-form form p{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+.login-form form a{
+    color:#0080ff
+}
+
+/* start landing section */
+/* section{
+    padding: 2rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    margin: -130px;
+} */
+.home .content{
+    /* text-align: center; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img.jpg);
+    background-size: 100% 100%;
+    
+}
+.home .content h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-shadow: 0 .1rem .2rem;
+    color: white;
+}
+.home .content h2:hover{
+    color:rgb(146, 146, 224) ;
+    cursor: pointer;
+}
+
+.home .content h2 span:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+.home .content p{
+    
+    font-size: 2.5rem;
+    color: white;
+    text-shadow:0 .1rem .2rem blue;
+    /* margin-top: 2rem; */
+}
+.home .content p:hover{
+    color: #d78e8e;
+    cursor: pointer;
+}
+.home a.box{
+    width: 50%;
+    text-align: center;
+    font-weight: bolder;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: white;
+    margin: 1rem 0;
+    border: 0.1rem solid rgba(0, 0, 0, .2);
+    background-color: #07333f;
+    margin-top: 4rem;
+}
+.home a.box:hover{
+    color: white;
+    background: var(--blue);
+    border: 1rem solid darkblue;
+    margin: 6rem 0;
+}
